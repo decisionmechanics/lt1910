@@ -288,6 +288,6 @@ Write a simple [grep](https://en.wikipedia.org/wiki/Grep) utility.
 
 Remember to **handle exceptions**. They are common when working with files.
 
-Try it out on a text file, such as one of the TypeScript files you've created.
+Try it out on a text file, such as one of the TypeScript files you've created. The text of "Dracula" is in the data folder.
 
 Try reading from a file path that doesn’t exist. Was the exception trapped?
