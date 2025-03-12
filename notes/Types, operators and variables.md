@@ -162,6 +162,8 @@ Escape backticks (``\```) to display them in template literals.
 
 Use a template literal to show a conversion from £ to $. You can obtain the latest rate at [XE.com](https://www.xe.com/currencyconverter/convert/?Amount=1&From=GBP&To=USD).
 
+You'll see the `toFixed` function later that will allow you to clean up the calculated values.
+
 ### String methods
 
 There are many methods that operate on strings. Some of the more popular ones are listed in the table below.
@@ -348,7 +350,7 @@ console.log(1 ?? 2);
 Expressions are combinations of values and operators. For example
 
 ```ts
-Math.sqrt*(1 + 2) * 3)
+Math.sqrt(1 + 2) * 3;
 ```
 
 Statements are individuals lines in the program. They may include expressions. We’ve already written a number of statements. Each of our `console.log` lines is a statement. Statements are delineated by semicolons (`;`).
@@ -420,6 +422,12 @@ The available arithmetic shortcut assignment operators are
 - `/=`
 - `%=`
 - `**=`
+
+There are other (e.g. logical) shortcut assignment operators.
+
+- `&&=`
+- `||=`
+- `??=`
 
 Shortcut assignment operators only work with `let` bound variables.
 

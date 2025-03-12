@@ -13,7 +13,7 @@ In this module, control flow is expanded to include
 
 Programs need to make decisions. For example, if a file doesn’t exist, the program needs to perform a different action (e.g. alert the user) than if it does exist (e.g. read the contents). This logic has the form “if (condition is met) doX else doY”.
 
-Sometimes we only want to perform an operation under some condition, and do  nothing if that condition isn’t met. This logic has the form “if (condition is met) doX”.
+Sometimes we only want to perform an operation under some condition, and do nothing if that condition isn’t met. This logic has the form “if (condition is met) doX”.
 
 ### if statements
 
@@ -41,7 +41,7 @@ const s = "";
 if (s === "") {
   console.log("the string is empty");
   console.log("was this a mistake?");
-}}
+}
 ```
 
 ### if…else statements
@@ -63,7 +63,7 @@ Again, if the body consists of a single statement, a simpler form can be used.
 ```ts
 const number = 1;
 
-if (number % 2 === 0) console.log("number is even")
+if (number % 2 === 0) console.log("number is even");
 else console.log("number is odd");
 ```
 
@@ -71,7 +71,7 @@ In this case, using the ternary operator would probably have been better.
 
 ```ts
 const number = 1;
-console.log(`number is ${number % 2 === 0 ? "even" : "odd"}`); 
+console.log(`number is ${number % 2 === 0 ? "even" : "odd"}`);
 ```
 
 It’s also possible to have chained if…else statements. The first one to match determines the block that is executed.
@@ -286,6 +286,8 @@ for (let i = 1; i <= 10; i++) {
 
 Write code to check if a number is prime. Is 7979 a prime number?
 
+Hint: Checking if a number is prime involves checking whether it is perfectly divisible by any number smaller than it.
+
 ### for…of loop
 
 Standard for loops are very flexible, but they involve a lot of boilerplate. There’s also the ever-present danger of committing an “off-by-one” error where you fail to process the first or last value in the sequence.
@@ -296,7 +298,7 @@ When we are working with collections of values, we can use a for…of loop to pr
 const primes = [2, 3, 5, 7, 11];
 
 for (const primes of primes) {
-   console.log(prime);
+  console.log(prime);
 }
 ```
 
@@ -338,7 +340,8 @@ const capitals = new Map<string, string>([
   ["Spain", "Madrid"],
 ]);
 
-for (const [country, capital] of capitals) { // Destructuring
+for (const [country, capital] of capitals) {
+  // Destructuring
   console.log(`The capital of ${country} is ${capital}`);
 }
 ```

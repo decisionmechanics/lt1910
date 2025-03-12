@@ -80,26 +80,14 @@ Code like this is very difficult to read.
 
 TS promises streamline asynchronous coding, making it more readable and manageable. Promises are objects that can be in one of three states: pending, fulfilled or rejected. Promises provide a way to handle asynchronous results without deep callback nesting, using `then` for fulfilled tasks and `catch` for errors.
 
-Inquirer.js is a popular package for prompting the user for information in command-line applications. It makes use of promises to read user input.
+Inquirer (`@inquirer/prompts`) is a popular package for prompting the user for information in command-line applications. It makes use of promises to read user input.
 
 ```ts
-import inquirer from "inquirer";
+import { input } from "@inquirer/prompts";
 
-const prompts = [
-  {
-    name: "name",
-    message: "What is your name?",
-  },
-  {
-    name: "email",
-    message: "What is your e-mail address?",
-  },
-];
-
-inquirer
-  .prompt(prompts)
-  .then(({ name, email }) => {
-    console.log(`Thanks, ${name}. I will contact you at ${email}.`);
+input({ message: "What is your name?" })
+  .then((name) => {
+    console.log(`Hello, ${name}.`);
   })
   .catch((err) => {
     if (err.isTtyError) {
@@ -110,8 +98,7 @@ inquirer
   });
 
 // ? What is your name? Jane
-// ? What is your e-mail address? Jane.Doe@example.com
-// Thanks, Jane. I will contact you at Jane.Doe@example.com.
+// Hello, Jane.
 ```
 
 ### async/await

@@ -4,11 +4,11 @@ TS is a hybrid language. You can write procedural, object-oriented and functiona
 
 React, the most popular web application development library, actively encourages a functional programming style using JS/TS.
 
-A grasp of functional programming constructs and idioms will make your future encounter with React less taxing. It’s also a great way to approach programming in general.
+It’s also a great way to approach programming in general.
 
 ### What is functional programming?
 
-Functional programming is a programming paradigm that treats computation as the evaluation of mathematical functions, avoiding changing state and mutable data. 
+Functional programming is a programming paradigm that treats computation as the evaluation of mathematical functions, avoiding changing state and mutable data.
 
 It emphasises
 
@@ -32,12 +32,12 @@ primes.push(13); // mutation
 const book = {
   title: "The Lord of the Rings",
   author: "J. R. R. Tolkien",
-}
+};
 
 book.title = "The Hobbit"; // mutation
 ```
 
-### Problems with mutable state 
+### Problems with mutable state
 
 Mutable state is often considered undesirable for several reasons.
 
@@ -62,7 +62,6 @@ TS has several methods and operators that support a functional approach.
 The `map` method transforms each item in an array to a new (usually derived) item. The length of the destination array is the same as the length of the source array.
 
 A new array is created. The original array remains unchanged.
-
 
 ```ts
 const numbers = [1, 2, 3, 4, 5];
@@ -154,7 +153,7 @@ const books = [
   {
     title: "To Kill a Mockingbird",
     published: 1960,
-  }
+  },
 ];
 ```
 
@@ -203,7 +202,7 @@ console.log(twentiethCenturyTitles); // ["The Great Gatsby", "Ulysses", "To Kill
 
 ### `reduce`
 
-The `reduce` method processes an array, executing a provided function on each element to produce a single accumulated result. It takes a callback with two main arguments—an accumulation and the current value. Optionally, it can also accept an initial value for the accumulation. 
+The `reduce` method processes an array, executing a provided function on each element to produce a single accumulated result. It takes a callback with two main arguments—an accumulation and the current value. Optionally, it can also accept an initial value for the accumulation.
 
 ```ts
 const primes = [2, 3, 5, 7, 11];
@@ -240,16 +239,16 @@ Use the `reduce` method to find the longest title in an array of book titles.
 
 ```ts
 const books = [
-    "Pride and Prejudice",
-    "To Kill a Mockingbird",
-    "1984",
-    "Moby-Dick",
-    "The Great Gatsby",
-    "War and Peace",
-    "One Hundred Years of Solitude",
-    "The Catcher in the Rye",
-    "Brave New World",
-    "Crime and Punishment"
+  "Pride and Prejudice",
+  "To Kill a Mockingbird",
+  "1984",
+  "Moby-Dick",
+  "The Great Gatsby",
+  "War and Peace",
+  "One Hundred Years of Solitude",
+  "The Catcher in the Rye",
+  "Brave New World",
+  "Crime and Punishment",
 ];
 ```
 
@@ -257,19 +256,19 @@ const books = [
 
 There are other array methods that are useful when using a functional programming style.
 
-The `find` method searches an array for the first item that satisfies a provided testing function and returns that element. If no element is found, it returns undefined. 
+The `find` method searches an array for the first item that satisfies a provided testing function and returns that element. If no element is found, it returns undefined.
 
 ```ts
 const numbers = [1, 3, 5, 7, 9];
-const found = numbers.find(number => number > 4);
+const found = numbers.find((number) => number > 4);
 console.log(found); // 5
 ```
 
-The `some` method tests whether at least one item in an array satisfies a condition. It returns `true` if _any_ item satisfies the condition, otherwise `false`. 
+The `some` method tests whether at least one item in an array satisfies a condition. It returns `true` if _any_ item satisfies the condition, otherwise `false`.
 
 ```ts
 const numbers = [1, 3, 5, 7, 9];
-const hasEvenNumber = numbers.some(number => number % 2 === 0);
+const hasEvenNumber = numbers.some((number) => number % 2 === 0);
 console.log(hasEvenNumber); // false
 ```
 
@@ -319,7 +318,7 @@ console.log(merged); // { a: 1, b: 3, c: 4 }
 
 ### Spread operator
 
-The spread operator (`...`) allows an array, string, or object to be expanded in places where zero or more elements or properties are expected. 
+The spread operator (`...`) allows an array, string, or object to be expanded in places where zero or more elements or properties are expected.
 
 - In function calls, it spreads elements as arguments
 - In arrays, it spreads elements into a new array

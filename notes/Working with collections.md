@@ -226,12 +226,11 @@ console.log(`${process.argv.length - 2} parameter(s) passed`);
 console.log(process.argv);
 ```
 
-The first parameter will be the path to Node (or ts-node). The second parameter is the path to the script (e.g. .`/dist/app.ts`). Any user parameters will start at index 2.
+The first parameter will be the path to Node (or tsx). The second parameter is the path to the script (e.g. .`/dist/app.ts`). Any user parameters will start at index 2.
 
 ### Hands-on: Working with command line arguments
 
 - Read a file path from the command line and display it
-- Display an error if the user doesn’t pass exactly one argument
 - Extract and display the filename from the file path
 
 Reading arguments from the command line allows us to build flexible utility applications.

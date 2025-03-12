@@ -200,14 +200,11 @@ This creates several files and folders in the root of your application.
 
 If you obtain a `package.json` file from elsewhere (e.g. via your source code repository) you can call `npm install` to download and install any third-party libraries required by the application. This is usually the first thing you do when you start working on an existing application.
 
-### Hands-on: Enable ES module loading
-
-Add `type: "module"` to package.json to enable ES module loading.
+Adding `type: "module"` to package.json enables ES module loading.
 
 ```json
 {
-  "devDependencies": {},
-  "dependencies": {},
+  ...
   "type": "module"
 }
 ```
@@ -219,7 +216,7 @@ This is needed to allow some packages to be imported using ES module syntax.
 By default, packages are installed local to the application. They don’t impact other applications on your system. You can use the `--global` option to install packages globally. This should be used sparingly, and only for packages that should be identical across all libraries (e.g. tooling packages).
 
 ```bash
-npm install --global ts-node
+npm install --global tsx
 ```
 
 ### Uninstalling packages
@@ -228,7 +225,7 @@ To uninstall packages, use
 
 ```bash
 npm uninstall express
-npm uninstall --global ts-node
+npm uninstall --global tsx
 ```
 
 ### Listing installed packages

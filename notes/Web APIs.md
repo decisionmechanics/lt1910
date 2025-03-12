@@ -100,7 +100,7 @@ app.get("/api/books/:isbn", (req, res) => {
 To see the result, browse to
 
 ```
-https://localhost:3001/api/books/9780241382707
+http://localhost:3001/api/books/9780241382707
 ```
 
 This should result in
@@ -124,7 +124,7 @@ app.get("/api/books/:isbn", (req, res) => {
   };
 
   const pretty = req.query.pretty;
-  const response = JSON.stringify(book, null, pretty ? 2 : 0);
+  const response = JSON.stringify(book, null, pretty && pretty !== "0" ? 2 : 0);
   res.send(response);
 });
 ```
@@ -132,7 +132,7 @@ app.get("/api/books/:isbn", (req, res) => {
 Access this operation via
 
 ```
-https://localhost:3001/api/books/9780241382707?pretty=1
+http://localhost:3001/api/books/9780241382707?pretty=1
 ```
 
 ### POSTing data
@@ -148,12 +148,14 @@ npm install uuid @types/uuid
 This operation adds an ID and returns it with the original book details.
 
 ```ts
+import { v4 } from "uuid";
+
 app.post("/api/books", (req, res) => {
   const book = req.body;
 
   res.status(201).send({
-    id: uuidv4(),
     ...book,
+    id: v4(),
   });
 });
 ```

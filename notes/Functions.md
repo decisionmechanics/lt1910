@@ -78,7 +78,7 @@ Parameterising functions makes them more reusable. However, too many parameters 
 
 ### Hands-on: Create a distance conversion function
 
-Write a function, `convertInchesToCentimetres`  that takes a distance in inches as a parameter and returns the corresponding distance in centimetres. Make sure it’s explicitly typed.
+Write a function, `convertInchesToCentimetres` that takes a distance in inches as a parameter and returns the corresponding distance in centimetres. Make sure it’s explicitly typed.
 
 Use the function to convert 12 inches to centimetres.
 
@@ -93,7 +93,7 @@ In TS, functions can be defined to allow optional parameters.
 Here’s how we can refactor the `raiseToPower` function to square values if no exponent is provided.
 
 ```ts
-function raiseToPower(base: number, exponent: number = 2): number {  
+function raiseToPower(base: number, exponent: number = 2): number {
   return base ** exponent;
 }
 
@@ -101,7 +101,7 @@ console.log(raiseToPower(2, 3)); // 8
 console.log(raiseToPower(2)); // 4
 ```
 
-### Hands-on: Create a generic imperial-to-metric conversion function
+### Hands-on: Create an imperial-to-metric conversion function
 
 Create a function that takes an imperial measure value, and a conversation factor, and returns the converted metric value. Set the default conversation factor to be 2.54 (i.e. the ratio of centimetres to inches).
 
@@ -113,7 +113,8 @@ As the body of a function is a block, any variables we define within it will be 
 let i = 999;
 
 function countdown() {
-  for (let i = 10; i > 0; i--) { // i is local
+  for (let i = 10; i > 0; i--) {
+    // i is local
     console.log(`${i}...`);
   }
 
@@ -122,7 +123,7 @@ function countdown() {
 
 console.log(i); // 999
 ```
- 
+
 Parameter values are also scoped to the life of the function call.
 
 ```ts
@@ -157,11 +158,7 @@ function displayBooks(books: string[]) {
   }
 }
 
-displayBooks([
-  "Lord of the Rings",
-  "The Dark Tower",
-  "The Hobbit",
-]);
+displayBooks(["Lord of the Rings", "The Dark Tower", "The Hobbit"]);
 ```
 
 ### Arrow functions
@@ -181,7 +178,7 @@ Subroutines can also be defined as arrow functions.
 const displayGreeting = () => {
   console.log("Hi.");
   console.log("How are you today?");
-}
+};
 
 displayGreeting();
 ```
@@ -203,7 +200,7 @@ function raiseToPower(base: number, exponent: number = 2): number {
 If we don’t assign an arrow function to a variable it becomes an anonymous function.
 
 ```ts
-(n: number): number => n ** 3
+(n: number): number => n ** 3;
 ```
 
 Anonymous functions are useful when you only need a function for a single task—i.e. don’t need to reuse it.
@@ -245,7 +242,7 @@ console.log("-----");
 
 for (const book in books.sort((a, b) => a.published.localeCompare(b.title))) {
   console.log(books[book].title);
-}  
+}
 ```
 
 ### Recursive functions
@@ -268,7 +265,7 @@ console.log(fibonacci(10)); // 55
 
 ### Hands-on: Calculate factorials
 
-Create a recursive function to calculate $n!$ (the factorial of n). Check your output against `Math.factorial`.
+Create a recursive function to calculate $n!$ (the factorial of n). Check your output using an online [factorial calculator](https://www.rapidtables.com/calc/math/Factorial_Calculator.html).
 
 Refactor your recursive factorial function to use a loop instead of recursion.
 
@@ -412,7 +409,7 @@ The generic `map` function can be used to transform an array of numbers into an 
 
 ```ts
 const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-console.log(map(numbers, (n: number) => n % 2 === 1));
+console.log(numbers.map((n: number) => n % 2 === 1));
 ```
 
 ### Closures
@@ -468,4 +465,4 @@ function map<T, U>(items: T[], fn: (item: T) => U): U[] {
 
 VS Code will now display detailed documentation whenever you use this function in your application.
 
-Comments in TS can be extracted to HTML documentation using [TypeDoc](https://typedoc.org). Using TSDoc comments over standard comments will improve the quality of this external documentation.   
+Comments in TS can be extracted to HTML documentation using [TypeDoc](https://typedoc.org). Using TSDoc comments over standard comments will improve the quality of this external documentation.

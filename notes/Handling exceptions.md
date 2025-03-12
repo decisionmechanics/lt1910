@@ -251,7 +251,7 @@ try {
 
 ### Working with files
 
-I/O is a common source of exceptions. 
+I/O is a common source of exceptions.
 
 We can use the standard Node [fs module](https://nodejs.org/api/fs.html#file-system) to read from, and write to, files. It contains `readFileSync` and `writeFileSync` methods.
 
@@ -262,7 +262,11 @@ try {
   const text = readFileSync("./dracula.txt", "utf-8");
   const words = text.split(/\s+/); // split on whitespace
   const wordCount = words.length;
-  writeFileSync(`there are around ${wordCount} words in Dracula`, "./wordCount.txt");
+
+  writeFileSync(
+    "./wordCount.txt",
+    `there are around ${wordCount} words in Dracula`
+  );
 } catch (err) {
   console.error(err);
 }
@@ -284,6 +288,6 @@ Write a simple [grep](https://en.wikipedia.org/wiki/Grep) utility.
 
 Remember to **handle exceptions**. They are common when working with files.
 
-Try it out on a text file
+Try it out on a text file, such as one of the TypeScript files you've created.
 
-Try reading from a file path that doesn’t exist. Then write to a file on a non-existing folder path. Were the exceptions trapped?
+Try reading from a file path that doesn’t exist. Was the exception trapped?

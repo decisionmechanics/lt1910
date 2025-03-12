@@ -175,11 +175,11 @@ Do the following.
 
 ### Installing TypeScript
 
-Use npm to install TypeScript. The ts-node package makes it easier to run TypeScript applications written for Node. The packages are installed globally so we can use them across all our applications.
+Use npm to install TypeScript. The tsx package makes it easier to run TypeScript applications written for Node. The packages are installed globally so we can use them across all our applications.
 
 ```bash
 npm install -g typescript
-npm install -g ts-node
+npm install -g tsx
 ```
 
 Only a select group of packages should be installed globally—packages that are truly required across multiple applications. Global packages run the risk of conflicting with the requirements of specific applications and tools.
@@ -235,7 +235,7 @@ There are many resources that cover how to get more proficient with VS Code (e.g
 - Install nvm
 - Install the LTS release of Node
 - Install TypeScript
-- Install ts-node
+- Install tsx
 - Install VS Code
 
 ### Hands-on: Our first application
@@ -253,7 +253,7 @@ console.log("Hello from LTREE!");
 Open a terminal and execute the script.
 
 ```bash
-ts-node app.ts
+tsx app.ts
 ```
 
 ### TypeScript configuration file
@@ -274,9 +274,6 @@ The following is a basic example.
     "strict": true,
     "esModuleInterop": true,
     "types": ["node"]
-  },
-  "ts-node": {
-    "esm": true
   }
 }
 ```
