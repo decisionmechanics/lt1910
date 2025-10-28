@@ -1,0 +1,1 @@
+{"version":3,"file":"conversion.js","sourceRoot":"","sources":["../src/conversion.ts"],"names":[],"mappings":"AACA,yDAAyD;AACzD,sFAAsF;AAEtF,MAAM,mBAAmB,GAAG,GAAG,CAAC;AAChC,MAAM,UAAU,iBAAiB,CAAC,KAAa,IAAY,OAAO,KAAK,GAAG,mBAAmB,CAAC,CAAC,CAAC;AAChG,MAAM,UAAU,iBAAiB,CAAC,UAAkB,IAAY,OAAO,UAAU,GAAE,mBAAmB,CAAC,CAAC,CAAC;AACzG,mDAAmD;AACnD,wCAAwC;AACxC,wDAAwD"}
